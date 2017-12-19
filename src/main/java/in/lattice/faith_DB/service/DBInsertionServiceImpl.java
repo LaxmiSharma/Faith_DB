@@ -75,11 +75,15 @@ public class DBInsertionServiceImpl implements DBInsertionService {
 					insertData(episodeVitals);
 					break;
 				case PacketConstant.Vesd_Auscultatory_ID: // to store this value on server, in which format I will get
-					byte[] VesdAuscData = (byte[]) packet.getPacket().getData(); // to ask sagar
-					String urlOfAudio = null;
+					byte[] VesdAuscData = (byte[]) packet.getPacket().getData(); // to ask sagar (".riff")
+					String urlOfAudio = PacketConstant.VESD_AUSCULTATORY_FILE_PATH;
 					if (VesdAuscData != null) {
 						urlOfAudio = saveAudioOnLocalServer(VesdAuscData);
-
+						episodeVitals.setPacketId(packet.getPacket().getId());
+						episodeVitals.getEpisode().setEpisodeId(packet.getEpisodeId());
+						episodeVitals.setParameterName(ParameterName.VESD_AUSCULTATORY_PATH);
+						episodeVitals.setVitalValue(urlOfAudio);
+						insertData(episodeVitals);
 					}
 					break;
 				case PacketConstant.Temperature_ID:
