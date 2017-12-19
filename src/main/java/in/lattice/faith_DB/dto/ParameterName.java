@@ -9,7 +9,8 @@ public enum ParameterName {
 					"Glucose(Random)"), ARRYTHMIA("Arrythmia"), URO("URO"), PH("PH"), NIT("NIT"), BLD("BLD"), BIL(
 							"BIL"), SG("SG"), KET("KET"), VC(
 									"VC"), GLU("GLU"), MAL("MAL"), PRO("PRO"), CR("CR"), LEU("LEU"), UCA("UCA")// SPIROMETER
-	, FVC("FVC"), FEV1("FEV1"), PEF("PEF"), FEV1_PERCENT("FEV1%"), FEF25("FEF25"), FEF2575("FEF2575"), FEF75("FEF75")// NIBP
+	, FVC("FVC"), FEV1("FEV1"), PEF("PEF"), FEV1_PERCENT("FEV1%"), FEF25("FEF25"), FEF2575("FEF2575"), FEF75(
+			"FEF75"), SPIROMETER_WAVE_DATA("Sp10 Wave")// NIBP
 	, NIBP("NIBP");
 
 	private String name;

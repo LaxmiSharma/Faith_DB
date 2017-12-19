@@ -2,8 +2,8 @@ package in.lattice.faith_DB.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.lattice.faith.restapi.dto.Episode;
+import in.lattice.faith_DB.dto.EpisodeVitals;
 
-public interface EpisodeVitalsRepository extends PagingAndSortingRepository<Episode, Long> {
+public interface EpisodeVitalsRepository extends PagingAndSortingRepository<EpisodeVitals, Long> {
 
 }

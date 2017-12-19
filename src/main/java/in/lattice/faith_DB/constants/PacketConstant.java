@@ -2,8 +2,10 @@ package in.lattice.faith_DB.constants;
 
 public class PacketConstant {
 
-	public static final byte ECGWave7Lead_ID = 0x01; 
-	public static final byte ECGInfo_ID = 0x02;  //returns obj
+	public static final String VESD_AUSCULTATORY_FILE_PATH = "E:\\Lattice_Innovation\\Faith Codes\\Faith_Files\\VesdAusc.riff";
+
+	public static final byte ECGWave7Lead_ID = 0x01;
+	public static final byte ECGInfo_ID = 0x02; // returns obj
 	public static final byte HR_ID = 0x03; // returns obj
 	public static final byte NIBP_ID = 0x04; // returns obj
 	public static final byte SPO2Wave_ID = 0x07;
