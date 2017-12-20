@@ -6,24 +6,21 @@ import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import in.lattice.faith.decoder.bean.HRData;
-import in.lattice.faith.decoder.bean.Height;
-import in.lattice.faith.decoder.bean.Nibp;
-import in.lattice.faith.decoder.bean.Sp10;
-import in.lattice.faith.decoder.bean.Spo2;
-import in.lattice.faith.decoder.bean.Temp;
-import in.lattice.faith.decoder.bean.Weight;
 import in.lattice.faith_DB.constants.PacketConstant;
-import in.lattice.faith_DB.dto.DBPacket;
-import in.lattice.faith_DB.dto.EpisodeVitals;
-import in.lattice.faith_DB.dto.ParameterName;
+import in.lattice.faith_DB.dto.*;
+import in.lattice.faith_DB.repository.EpisodeVitalsRepository;
 
 @Service
 public class DBInsertionServiceImpl implements DBInsertionService {
 
 	private static Deque<DBPacket> packetDeque;
+	
 	@Autowired
 	private EpisodeVitalsRepository episodeVitalsRepository;
+
+	public DBInsertionServiceImpl() {
+		packetDeque = new LinkedList<DBPacket>();
+	}
 
 	@Override
 	public synchronized void add(DBPacket packet) {
